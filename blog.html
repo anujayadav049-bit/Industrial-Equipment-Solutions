@@ -21,40 +21,42 @@
   </div>
 </div>
 
-<!-- ===== HEADER SAME ===== -->
-   <header>
-		
-            <div class="container nav">
-                <a href="index.html" class="logo">
-                   <img src="images/logo.jpeg" style="width: 170px; height: 80px; object-fit: contain; margin-left: -30px;" />
-                </a>
+ <!-- ================= HEADER ================= -->
+<header class="new-header">
+    <div class="container nav">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpeg" alt="Logo"/>
+        </a>
 
-				<div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+        <div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
 
-                <div class="menu" id="mobileMenu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li>
-                            <a href="services.html" onclick="openSub(event)">Services <i class="fa-solid fa-angle-down"></i></a>
-                            <ul id="submenu">
-                                <li><a href="electrical.html">Electrical</a></li>
-                                <li><a href="stationery.html">Stationery</a></li>
-                                <li><a href="computer.html">Computer</a></li>
-                                <li><a href="printing.html">Printing</a></li>
-                                <li><a href="general.html">General Items</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+        <div class="menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="has-sub">
+                   <a href="javascript:void(0)" onclick="openSub(event)">Services <i class="fa-solid fa-angle-down"></i></a>
+                    <ul id="submenu">
+                        <li><a href="electrical.html">Electrical</a></li>
+                        <li><a href="stationery.html">Stationery</a></li>
+                        <li><a href="computer.html">Computer</a></li>
+                        <li><a href="printing.html">Printing</a></li>
+                        <li><a href="general.html">General Items</a></li>
                     </ul>
-                </div>
-
-                <div class="phone"><i class="fa-solid fa-phone"></i> +91 0000000000</div>
-                <a href="contact.html" class="quote-btn">Get Quote</a>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="tel:+91-9667799860" class="phone-link"><i class="fa-solid fa-phone"></i> +91-96677 99860</a>
+                <a href="shop.html" class="btn-shop"><i class="fa-solid fa-bag-shopping"></i> Shop Now</a>
+                <a href="contact.html" class="btn-quote">Get Quote →</a>
             </div>
-        </header>
+        </div>
+    </div>
+</header>
+ <!-- ================= HEADER END================= -->
+ 
 <!-- ================= BLOG HEAVY PAGE START ================= -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -160,73 +162,129 @@
                 <a href="#contact" class="quote-btn"> Request a Quote → </a>
             </div>
         </section>
-<!-- ===== FOOTER SAME ===== -->
- <footer>
-            <div class="container">
-                <div class="footer-grid">
+
+        <!-- ================= Cat ================= -->
+
+<!-- ================= FOOTER ================= -->
+<footer style="background:#0e2f7a; color:#fff; padding:60px 0 0;">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="logo">
                     <div>
-                        <div class="logo">
-                            <div>
-                                <img src="images/logo.webp" style="width: 180px; height: 80px; object-fit: contain" />
-                            </div>
-                        </div>
-
-                        <p style="margin-top: 20px">
-                            Electrical services, office stationery and reliable<br> product supply solutions.
-							Quality services, reliable<br>  products and complete solutions for your electrical,<br>  office and supply needs.
-
-
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3>Quick Links</h3>
-
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="services.html">Service</a></li>
-                            <li><a href="privacypolicy.html">Privacy & Policy</a></li>
-                            <li><a href="termcondition.html">Term & Condition</a></li>
-                            <li><a href="refund.html">Refund Policy</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3>Contact Us</h3>
-
-                        <p><i class="fa-solid fa-phone"></i> +91 0000000000</p>
-                        <p><i class="fa-brands fa-whatsapp"></i> +91 0000000000</p>
-                        <p><i class="fa-solid fa-envelope"></i> nexinfosoft@gmail.com</p>
-                        <p>
-                            <i class="fa-solid fa-location-dot"></i> Plot No. 113, Near Ramada By<br> Wyndham Central,
-                            Sector 44, <br>Gurugram, Haryana – 122003
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3>Follow Us</h3>
-
-                        <div class="social">
-                            <span><a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; text-decoration:none;">
-                               <i class="fa-brands fa-facebook-f"></i></a></span>
-                            <span> <a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; text-decoration:none;">
-                                <i class="fa-brands fa-instagram"></i></a></span>
-                            <span> <a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; text-decoration:none;">
-                               <i class="fa-brands fa-linkedin-in"></i></a></span>
-                            <span><a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; text-decoration:none;">
-                              <i class="fa-solid fa-play"></i></a></span>
-                        </div>
+                        <img src="images/logo.jpeg" style="width: 180px; height: 80px; object-fit: contain; background:#fff; border-radius:8px; padding:5px;" />
                     </div>
                 </div>
-
-                <div class="copyright">© 2026 Nexinfosoft IT Solutions. All Rights Reserved.</div>
+                <p style="margin-top: 20px; color:#fff; opacity:.85; font-size:14px; line-height:1.6;">
+                    Electrical services, office stationery and reliable<br> product supply solutions.
+                    Quality services, reliable<br>  products and complete solutions for your electrical,<br>  office and supply needs.
+                </p>
             </div>
-        </footer>
 
+            <div>
+                <h3 style="color:#ffcc00;">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" style="color:#fff; opacity:.85;">Home</a></li>
+                    <li><a href="services.html" style="color:#fff; opacity:.85;">Service</a></li>
+                    <li><a href="gallery.html" style="color:#fff; opacity:.85;">Gallery</a></li>
+                    <li><a href="blog.html" style="color:#fff; opacity:.85;">Blog </a></li>
+                    <li><a href="contact.html" style="color:#fff; opacity:.85;">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 style="color:#ffcc00;">Contact Us</h3>
+                <p><i class="fa-solid fa-phone"></i> +91-9667799860</p>
+                <p><i class="fa-brands fa-whatsapp"></i> +91-9667799860</p>
+                <p><i class="fa-solid fa-envelope"></i> nexinfosoft@gmail.com</p>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i> Plot No. 113, Near Ramada By<br> Wyndham Central,
+                    Sector 44, <br>Gurugram, Haryana – 122003
+                </p>
+            </div>
+
+            <div>
+                <h3 style="color:#ffcc00;">Follow Us</h3>
+                <div class="social">
+                    <span><a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#0e2f7a; font-size:20px; text-decoration:none;">
+                       <i class="fa-brands fa-facebook-f"></i></a></span>
+                    <span> <a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#0e2f7a; font-size:20px; text-decoration:none;">
+                        <i class="fa-brands fa-instagram"></i></a></span>
+                    <span> <a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#0e2f7a; font-size:20px; text-decoration:none;">
+                       <i class="fa-brands fa-linkedin-in"></i></a></span>
+                    <span><a href="" target="_blank" style="width:48px; height:40px; background:#ffcc00; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#0e2f7a; font-size:20px; text-decoration:none;">
+                      <i class="fa-brands fa-x-twitter"></i></a></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM BAR - LEFT COPYRIGHT / RIGHT NAV -->
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-top:40px; padding:18px 0; border-top:1px solid rgba(255,255,255,.15);">
+            <span style="font-size:13px; opacity:.8;">© 2026 Industrial Equipment Solution. All Rights Reserved.</span>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <a href="privacypolicy.html" style="background:#ffcc00; color:#0e2f7a; padding:6px 14px; border-radius:20px; font-size:11px; font-weight:900; text-decoration:none;">Privacy Policy</a>
+                <a href="termcondition.html" style="background:#ffcc00; color:#0e2f7a; padding:6px 14px; border-radius:20px; font-size:11px; font-weight:900; text-decoration:none;">Terms & Conditions</a>
+                <a href="refund.html" style="background:#ffcc00; color:#0e2f7a; padding:6px 14px; border-radius:20px; font-size:11px; font-weight:900; text-decoration:none;">Refund Policy</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+    <!-- ================= FOOTER ================= -->
+		
+		<div class="cursor"></div>
+		
+		<!-- ========= WhatsApp Popup Widget ========= -->
+<div id="wa-btn" style="position:fixed; bottom:25px; right:25px; width:62px; height:62px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:34px; box-shadow:0 8px 25px rgba(0,0,0,0.3); z-index:9999; cursor:pointer;">
+  <i class="fa-brands fa-whatsapp"></i>
+</div>
+
+<div id="wa-box" style="display:none; position:fixed; bottom:95px; right:25px; width:360px; max-width:90vw; background:#fff; border-radius:18px; box-shadow:0 10px 40px rgba(0,0,0,0.3); z-index:9999; overflow:hidden; font-family:Arial, sans-serif;">
+  
+  <!-- Header -->
+  <div style="background:#075E54; color:#fff; padding:16px 18px; display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style="width:42px; height:42px; background:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#25D366; font-size:24px;"><i class="fa-brands fa-whatsapp"></i></div>
+      <div>
+        <div style="font-weight:700; font-size:16px;">WhatsApp Support</div>
+        <div style="font-size:12px; opacity:0.9;">Typically replies within minutes</div>
+      </div>
+    </div>
+    <div id="wa-close-top" style="cursor:pointer; font-size:22px;"><i class="fa-solid fa-xmark"></i></div>
+  </div>
+
+  <!-- Body -->
+  <div style="padding:20px; background:#f0f0f0;">
+    <div style="background:#fff; padding:16px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+      <p style="margin:0 0 16px; font-size:14px; color:#333; line-height:1.5;">Need help with booking or project information?</p>
+      <p style="margin:0 0 16px; font-size:14px; color:#333; line-height:1.5;">Click below to chat with our support team directly on WhatsApp.</p>
+      
+      <p style="margin:8px 0; color:#1a8a3a; font-size:14px; font-weight:600;">• Available 24/7</p>
+      <p style="margin:8px 0; color:#1a8a3a; font-size:14px; font-weight:600;">• Fast Response</p>
+      <p style="margin:8px 0 20px; color:#1a8a3a; font-size:14px; font-weight:600;">• Instant Assistance</p>
+
+      <a href="#" target="_blank" style="display:flex; align-items:center; justify-content:space-between; background:#fff; border:1px solid #e0e0e0; padding:12px 14px; border-radius:10px; text-decoration:none;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <i class="fa-brands fa-whatsapp" style="color:#25D366; font-size:22px;"></i>
+          <div>
+            <div style="font-weight:700; color:#111; font-size:14px;">Industrial Equipment Support</div>
+            <div style="font-size:12px; color:#666;">+91 96677 99860</div>
+          </div>
+        </div>
+        <i class="fa-solid fa-paper-plane" style="color:#999;"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Close Button jab box khula ho -->
+<div id="wa-close-bottom" style="display:none; position:fixed; bottom:25px; right:25px; width:62px; height:62px; background:#25D366; border-radius:50%; align-items:center; justify-content:center; color:#fff; font-size:26px; z-index:9999; cursor:pointer;">
+  <i class="fa-solid fa-xmark"></i>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
-
-
 
 </body>
 </html>
