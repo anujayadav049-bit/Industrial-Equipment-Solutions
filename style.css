@@ -802,3 +802,27 @@ s@media (max-width: 768px){
   display: inline-block;
   animation: bijliChamak 1.2s infinite, halkaShake 0.3s infinite;
 }
+
+
+/* SAB TEXT NEECHE SE UPAR */
+@keyframes uparAao {
+  from { transform: translateY(80px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+.text-up {
+  animation: uparAao 0.5s ease-out forwards;
+}
+
+@keyframes tadak-bhadak {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0px #ffcc00; }
+  50% { transform: scale(1.05); box-shadow: 0 0 15px #ffcc00; }
+}
+
+.shop-now-btn, .quote-btn {
+  animation: tadak-bhadak 1.2s infinite !important;
+  display: inline-block;
+}
+
+

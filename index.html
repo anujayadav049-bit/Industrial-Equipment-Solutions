@@ -667,6 +667,12 @@
         
         </script>
 
+<script>
+  // Sirf h1 aur p ko upar se layega
+  document.querySelectorAll("h1, h2, p, a, s").forEach((el, i) => {
+    el.style.animation = `uparAao 0.6s ease-out ${i * 0.02}s both`;
+  });
+</script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
