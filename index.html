@@ -623,44 +623,44 @@
             <div id="wa-close-bottom" style="display:none; position:fixed; bottom:25px; right:25px; width:62px; height:62px; background:#25D366; border-radius:50%; align-items:center; justify-content:center; color:#fff; font-size:26px; z-index:9999; cursor:pointer;">
             <i class="fa-solid fa-xmark"></i>
             </div>
-<button id="topBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
-            <script>
-            const waBtn = document.getElementById('wa-btn');
-            const waBox = document.getElementById('wa-box');
-            const waCloseTop = document.getElementById('wa-close-top');
-            const waCloseBottom = document.getElementById('wa-close-bottom');
 
-            function openWA(){ waBox.style.display='block'; waBtn.style.display='none'; waCloseBottom.style.display='flex'; }
-            function closeWA(){ waBox.style.display='none'; waBtn.style.display='flex'; waCloseBottom.style.display='none'; }
+        <script>
+        const waBtn = document.getElementById('wa-btn');
+        const waBox = document.getElementById('wa-box');
+        const waCloseTop = document.getElementById('wa-close-top');
+        const waCloseBottom = document.getElementById('wa-close-bottom');
 
-            waBtn.onclick = openWA;
-            waCloseTop.onclick = closeWA;
-            waCloseBottom.onclick = closeWA;
-            
-            function openSub(e){
-            e.preventDefault();
-            e.stopPropagation();
-            const sub = document.getElementById('submenu');
-            sub.classList.toggle('show');
-            return false;
-            }
+        function openWA(){ waBox.style.display='block'; waBtn.style.display='none'; waCloseBottom.style.display='flex'; }
+        function closeWA(){ waBox.style.display='none'; waBtn.style.display='flex'; waCloseBottom.style.display='none'; }
 
-            function toggleMenu(){
-            document.getElementById('mobileMenu').classList.toggle('active');
-            }
+        waBtn.onclick = openWA;
+        waCloseTop.onclick = closeWA;
+        waCloseBottom.onclick = closeWA;
+        
+        function openSub(e){
+        e.preventDefault();
+        e.stopPropagation();
+        const sub = document.getElementById('submenu');
+        sub.classList.toggle('show');
+        return false;
+        }
 
-            document.getElementById("quoteForm").addEventListener("submit", function(e){
-            e.preventDefault();
-            var formData = new FormData(this);
-            fetch("contact_save.php", { method: "POST", body: formData })
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("formMsg").style.display = "block";
-                document.getElementById("quoteForm").reset();
-                setTimeout(()=>{ document.getElementById("formMsg").style.display="none"; }, 4000);
-            });
-            });
-            </script>
+        function toggleMenu(){
+        document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        document.getElementById("quoteForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        var formData = new FormData(this);
+        fetch("contact_save.php", { method: "POST", body: formData })
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("formMsg").style.display = "block";
+            document.getElementById("quoteForm").reset();
+            setTimeout(()=>{ document.getElementById("formMsg").style.display="none"; }, 4000);
+        });
+        });
+        </script>
 
 
 

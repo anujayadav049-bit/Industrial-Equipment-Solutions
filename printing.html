@@ -143,7 +143,7 @@
       <p style="font-size:12px; color:#666; margin:6px 0 18px 0;">Get quotation in 10 mins</p>
       
       <form id="quoteForm" method="POST" action="contact_save.php" style="display:grid; gap:12px;">
-        <input type="hidden" name="source_page" value="electrical_page">
+        <input type="hidden" name="source_page" value="printing_page">
         <div id="formMsg" style="display:none; padding:12px; background:#d4edda; color:#155724; border-radius:8px; text-align:center; font-weight:bold; margin-bottom:15px;">
     ✅ Submitted Successfully! Thank You.
   </div>
@@ -310,13 +310,26 @@
 <script>
 document.getElementById("quoteForm").addEventListener("submit", function(e){
   e.preventDefault();
+  var btn = this.querySelector('button[type="submit"]');
+  btn.innerText = "Sending...";
+  btn.disabled = true;
   var formData = new FormData(this);
   fetch("contact_save.php", { method: "POST", body: formData })
   .then(res => res.text())
   .then(data => {
-    document.getElementById("formMsg").style.display = "block";
-    document.getElementById("quoteForm").reset();
-    setTimeout(()=>{ document.getElementById("formMsg").style.display="none"; }, 4000);
+    console.log(data);
+    let msgBox = document.getElementById("formMsg");
+    msgBox.style.display = "block";
+    if(data.trim() == "success"){
+      msgBox.innerHTML = "✅ Submitted! We will call you in 10 mins.";
+      msgBox.style.background = "#d4edda"; msgBox.style.color = "#155724";
+      document.getElementById("quoteForm").reset();
+    } else {
+      msgBox.innerHTML = "❌ " + data;
+      msgBox.style.background = "#f8d7da"; msgBox.style.color = "#721c24";
+    }
+    btn.innerText = "Send Request"; btn.disabled = false;
+    setTimeout(()=>{ msgBox.style.display="none"; }, 5000);
   });
 });
 </script>

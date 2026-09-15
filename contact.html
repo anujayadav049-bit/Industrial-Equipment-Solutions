@@ -242,9 +242,19 @@ document.getElementById("quoteForm").addEventListener("submit", function(e){
   fetch("contact_save.php", { method: "POST", body: formData })
   .then(res => res.text())
   .then(data => {
-    document.getElementById("formMsg").style.display = "block";
-    document.getElementById("quoteForm").reset();
-    setTimeout(()=>{ document.getElementById("formMsg").style.display="none"; }, 4000);
+    console.log(data); // F12 me dikhega
+    if(data.trim() == "success"){
+      document.getElementById("formMsg").innerHTML = "✅ Submitted Successfully! Thank You.";
+      document.getElementById("formMsg").style.display = "block";
+      document.getElementById("formMsg").style.background = "#d4edda";
+      document.getElementById("quoteForm").reset();
+    } else {
+      document.getElementById("formMsg").innerHTML = "❌ " + data;
+      document.getElementById("formMsg").style.display = "block";
+      document.getElementById("formMsg").style.background = "#f8d7da";
+      document.getElementById("formMsg").style.color = "#721c24";
+    }
+    setTimeout(()=>{ document.getElementById("formMsg").style.display="none"; }, 5000);
   });
 });
 </script>

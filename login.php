@@ -14,6 +14,12 @@ button{width:100%;padding:10px;background:#ff6600;color:#fff;border:none;cursor:
 <body>
 <div class="box">
 <h2>Admin Login</h2>
+<?php 
+if(isset($_SESSION['error'])){ 
+    echo "<p style='color:red;background:#ffe5e5;padding:8px;border-radius:5px;text-align:center'>".$_SESSION['error']."</p>"; 
+    unset($_SESSION['error']); 
+} 
+?>
 <form method="POST" action="auth.php" autocomplete="off">
 <input type="email" name="email" placeholder="Email" required autocomplete="off">
 
