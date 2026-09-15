@@ -761,11 +761,44 @@ s@media (max-width: 768px){
 
 
 .gallery-item:hover{ transform: scale(1.05) rotate(1deg); transition:0.3s; }
-#topBtn{ display:block !important; position:fixed; bottom:20px; right:20px; z-index:9999; background:#0e2f7a; color:#ffcc00; border:none; width:50px; height:50px; border-radius:50%; font-size:22px; cursor:pointer; }
 
-#topBtn{
-  left: 25px !important;
-  right: auto !important;
-  bottom: 25px !important;
-  background-color: yellow;
+
+
+/* TADAKTA-BHADAKTA ANIMATIONS */
+@keyframes electricShake {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+@keyframes yellowGlow {
+  0% { box-shadow: 0 0 5px #ffcc00; }
+  50% { box-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00; }
+  100% { box-shadow: 0 0 5px #ffcc00; }
+}
+.tadak-btn{
+  animation: yellowGlow 1.5s infinite, electricShake 0.3s infinite;
+  animation-delay: 0s, 3s; /* 3 sec baad halka shake */
+}
+.tadak-text{
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+  animation: electricShake 0.5s infinite;
+}
+
+/* IES Tadakta Bhadakta */
+@keyframes bijliChamak {
+  0%, 100% { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; color: #ffcc00; }
+  50% { text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00, 0 0 60px #ffcc00; color: #fff; transform: scale(1.05); }
+}
+@keyframes halkaShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px) rotate(-0.5deg); }
+  75% { transform: translateX(2px) rotate(0.5deg); }
+}
+.bijli-text {
+  display: inline-block;
+  animation: bijliChamak 1.2s infinite, halkaShake 0.3s infinite;
 }

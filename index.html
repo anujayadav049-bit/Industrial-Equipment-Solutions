@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Electrical Website</title>
+        <title>Industrial Equipment Solution</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
         <link rel="stylesheet" href="style.css" />
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -42,7 +42,8 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li class="has-sub">
-                   <a href="javascript:void(0)" onclick="openSub(event)">Services <i class="fa-solid fa-angle-down"></i></a>
+                   <a href="services.html" onclick="openSub(event)">Services
+                     <i class="fa-solid fa-angle-down"></i></a>
                     <ul id="submenu">
                         <li><a href="electrical.html">Electrical</a></li>
                         <li><a href="stationery.html">Stationery</a></li>
@@ -56,8 +57,9 @@
             
             <div class="header-actions">
                 <a href="tel:+91-96677 99860" class="phone-link"><i class="fa-solid fa-phone"></i> +91-96677 99860</a>
-                <a href="shop.html" class="btn-shop"><i class="fa-solid fa-bag-shopping"></i> Shop Now</a>
-                <a href="contact.html" class="btn-quote">Get Quote →</a>
+                <a href="services.html" class="btn-shop tadak-btn"><i class="fa-solid fa-bag-shopping"></i> Shop Now</a>
+                <a href="contact.html" class="btn-quote tadak-btn">Get Quote →</a>
+                
             </div>
         </div>
     </div>
@@ -83,7 +85,7 @@
                         ONE STOP SOLUTION FOR YOUR BUSINESS & HOME
                     </div>
                     <h1 style="font-size: 40px; line-height: 1.2">
-                        Electrical Work Services<br />Office Stationery &<br /><span style="color: #ffcc00"
+                        Electrical Work Services<br />Office Stationery &<br /><span class="bijli-text" style="color: #ffcc00"
                             >Product Supply</span
                         >
                     </h1>
@@ -141,8 +143,9 @@
                             Trusted<br />Product Supply
                         </div>
                     </div>
-                    <a
-                        href="#contact"
+                    
+                    <a class="btn-quote tadak-btn"
+                        href="#contact.html"
                         style="
                             background: #ffcc00;
                             color: #000;
@@ -229,7 +232,7 @@
 		<!-- Bulk Bar - FIXED Top, Menu se Bahar -->
 <div id="bulk-offer-bar" style="background:#ffcc00; color:#000; padding:8px 15px; text-align:center; font-weight:700; font-size:14px; width:100%; z-index:90; display:flex; justify-content:center; align-items:center; gap:10px;">
   <span>🎉 Flat 10% OFF on Bulk Orders for Schools, Offices & Builders</span>
-  <a href="https://wa.me/919871122445?text=Bulk Offer chahiye" style="background:#000; color:#ffcc00; padding:4px 12px; border-radius:20px; text-decoration:none; font-size:13px;">Get Quote</a>
+  <a href="contact.html" class="btn tadak-btn" style="background:#000; color:#ffcc00; padding:4px 12px; border-radius:20px; text-decoration:none; font-size:13px;">Get Quote</a>
 </div>
 
      <!-- ================= SERVICES ================= -->
@@ -660,6 +663,8 @@
             setTimeout(()=>{ document.getElementById("formMsg").style.display="none"; }, 4000);
         });
         });
+
+        
         </script>
 
 
