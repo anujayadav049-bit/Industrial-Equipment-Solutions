@@ -7,6 +7,7 @@
         <title>Industrial Equipment Solution</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="animation.css">
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	 <style>
 
@@ -430,35 +431,37 @@
 
 <!-- ========= Testimonials with Round Photos ========= -->
 
-    <section id="testimonials" style="padding:60px 20px; background:#f8f9fa;">
+<section id="testimonials" style="padding:60px 20px; background:#f8f9fa;">
   <h2 style="text-align:center; font-size:32px; margin-bottom:40px; color:#0e2f7a;">What Our Clients Say</h2>
-  
-  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; max-width:1100px; margin:auto;">
-    
-    <!-- Box 1 -->
-    <div style="background:#fff; padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.08); flex:1; min-width:280px; max-width:350px; text-align:center;">
-      <p style="font-size:15px; color:#555; line-height:1.6;">"Complete office wiring in Sector 48 done in just 1 day, work was done very neatly and cleanly."</p>
-      <img src="images/test1.jpeg" style="width:60px; height:60px; border-radius:50%; object-fit:cover; margin-top:15px; border:3px solid #0e2f7a;">
-      <h4 style="margin:10px 0 0; color:#0e2f7a;">Amit kumar</h4>
-      <span style="font-size:13px; color:#888;">Sector 44, Gurugram</span>
-    </div>
 
-    <!-- Box 2 -->
-    <div style="background:#fff; padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.08); flex:1; min-width:280px; max-width:350px; text-align:center;">
-      <p style="font-size:15px; color:#555; line-height:1.6;">"Bulk stationery order was delivered on time, and the rates were also the best in the market</p>
-      <img src="images/test3.jpeg" style="width:60px; height:60px; border-radius:50%; object-fit:cover; margin-top:15px; border:3px solid #0e2f7a;">
-      <h4 style="margin:10px 0 0; color:#0e2f7a;">Ramesh Kumar</h4>
-      <span style="font-size:13px; color:#888;">Sohna Road</span>
-    </div>
+  <!-- Yeh wrapper blank issue fix karega -->
+  <div style="overflow:hidden; max-width:1100px; margin:auto;">
+    <div class="testi-container" style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; transition: transform 0.5s ease;">
 
-    <!-- Box 3 -->
-    <div style="background:#fff; padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.08); flex:1; min-width:280px; max-width:350px; text-align:center;">
-      <p style="font-size:15px; color:#555; line-height:1.6;">"The quality of electrical products is the best, we have been buying from them for 2 years."</p>
-      <img src="images/test2.jpeg" style="width:60px; height:60px; border-radius:50%; object-fit:cover; margin-top:15px; border:3px solid #0e2f7a;">
-      <h4 style="margin:10px 0 0; color:#0e2f7a;">Priya Enterprises</h4>
-      <span style="font-size:13px; color:#888;">Manesar</span>
+      <div class="testi-card" style="background:#fff; padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.08); flex:1; min-width:280px; max-width:350px; text-align:center;">
+        <p style="font-size:15px; color:#555; line-height:1.6;">"Complete office wiring in Sector 48 done in just 1 day, work was done very neatly and cleanly."</p>
+        <img src="images/test1.jpeg" style="width:60px; height:60px; border-radius:50%; object-fit:cover; margin-top:15px; border:3px solid #0e2f7a;">
+        <h4 style="margin:10px 0 0; color:#0e2f7a;">Amit kumar</h4>
+        <span style="font-size:13px; color:#888;">Sector 44, Gurugram</span>
+      </div>
+
+      <div class="testi-card" style="background:#fff; padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.08); flex:1; min-width:280px; max-width:350px; text-align:center;">
+        <p style="font-size:15px; color:#555; line-height:1.6;">"Bulk stationery order was delivered on time, and the rates were also the best in the market"</p>
+        <img src="images/test3.jpeg" style="width:60px; height:60px; border-radius:50%; object-fit:cover; margin-top:15px; border:3px solid #0e2f7a;">
+        <h4 style="margin:10px 0 0; color:#0e2f7a;">Ramesh Kumar</h4>
+        <span style="font-size:13px; color:#888;">Sohna Road</span>
+      </div>
+
+      <div class="testi-card" style="background:#fff; padding:25px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.08); flex:1; min-width:280px; max-width:350px; text-align:center;">
+        <p style="font-size:15px; color:#555; line-height:1.6;">"The quality of electrical products is the best, we have been buying from them for 2 years."</p>
+        <img src="images/test2.jpeg" style="width:60px; height:60px; border-radius:50%; object-fit:cover; margin-top:15px; border:3px solid #0e2f7a;">
+        <h4 style="margin:10px 0 0; color:#0e2f7a;">Priya Enterprises</h4>
+        <span style="font-size:13px; color:#888;">Manesar</span>
+      </div>
+
     </div>
   </div>
+  <div class="testi-dots" style="display:none; justify-content:center; gap:10px; margin-top:25px;"></div>
 </section>
 
 
@@ -678,5 +681,6 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
+<script src="animation.js"></script>
     </body>
 </html>
