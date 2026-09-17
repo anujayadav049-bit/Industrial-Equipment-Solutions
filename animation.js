@@ -54,3 +54,4 @@ if(window.innerWidth <= 768 && testiContainer){
   setInterval(()=>{ move((cur+1)%testiCards.length); }, 3000);
   move(0);
 }
+
