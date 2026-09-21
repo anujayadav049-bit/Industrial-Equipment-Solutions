@@ -101,11 +101,16 @@ nav a:hover { color: #0864ca; }
 }
 .feature:hover .feature-icon { transform: scale(1.15) rotate(10deg); }
 
+
+
+
+
+
 /* ================= SECTION ================= */
 section { padding: 70px 0; }
 .section-title { text-align: center; margin-bottom: 40px; }
 .section-title h2 { font-size: 36px; color: #102b52; }
-.section-title h2 span { color: #0870d1; }
+.section-title h2 span { color: #ffcc00; }
 .section-title p { color: #666; }
 
 /* ================= SERVICES ================= */
@@ -126,7 +131,7 @@ section { padding: 70px 0; }
 .service-card:hover li { transform: translateX(3px); }
 .service-card li::before { content: "✓"; color: #0870d1; font-weight: bold; margin-right: 8px; }
 .learn {
-    display: inline-block; background: #0870d1; color: white; padding: 9px 20px;
+    display: inline-block; background: #0A2F6B; color: white; padding: 9px 20px;
     border-radius: 25px; font-size: 13px; font-weight: bold; transition: 0.3s;
 }
 .learn:hover { background: #062d59; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(8,112,209,0.3); }
@@ -151,7 +156,7 @@ section { padding: 70px 0; }
 }
 .about-image:hover { transform: scale(1.02); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
 .about h2 { font-size: 36px; margin-bottom: 15px; }
-.about h2 span { color: #0870d1; }
+.about h2 span { color: #ffcc00; }
 .about p { color: #666; margin-bottom: 20px; }
 .about-list { list-style: none; }
 .about-list li { margin: 10px 0; font-weight: 600; transition: 0.2s; }
@@ -213,7 +218,7 @@ footer li:hover { transform: translateX(4px); color: #fff; }
 }
 .faq-answer{
   max-height:0; overflow:hidden; padding:0 20px; color:#555;
-  font-size:14px; line-height:1.6; transition: all 0.4s ease;
+  font-size:18px; line-height:1.6; transition: all 0.4s ease;
 }
 .faq-item.active .faq-answer{ max-height:200px; padding:0 20px 18px; }
 .faq-item.active .faq-question i{ transform: rotate(45deg); background:#ffca28; color:#000; }
@@ -391,7 +396,7 @@ body:has(#mobileMenu.active) #bulk-offer-bar{ display:none !important; }
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  border-top: 4px solid #FF7A00;
+  border-top: 4px solid #ffcc00;
   animation: fadeUp 0.8s ease forwards;
   opacity: 0;
 }
@@ -414,13 +419,13 @@ body:has(#mobileMenu.active) #bulk-offer-bar{ display:none !important; }
   align-items: center;
   justify-content: center;
   font-size: 32px;
-  color: #FF7A00;
+  color: #ffcc00;
   transition: all 0.4s ease;
 }
 
 .service-card:hover .service-icon {
   transform: rotateY(360deg);
-  background: #FF7A00;
+  background: #ffcc00;
   color: white;
 }
 
@@ -821,8 +826,137 @@ s@media (max-width: 768px){
 }
 
 .shop-now-btn, .quote-btn {
-  animation: tadak-bhadak 1.2s infinite !important;
+  animation: tadak-bhadak 5.5s infinite !important;
   display: inline-block;
 }
 
 
+/* CENTER + EQUAL dono ek saath */
+#services .service-card{
+  text-align: center !important;
+}
+
+#services .service-card ul{
+  display: inline-block !important; /* beech me aayega */
+  text-align: left !important; /* andar equal rahega */
+  margin: 0 auto 20px auto !important;
+  width: auto !important;
+}
+
+#services .service-card ul li{
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+/* 3 Cards Equal Height + Button Neeche Fix */
+
+
+
+/* ===== FINAL RESPONSIVE FIX - sabse last me paste karo ===== */
+.services{
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 25px !important;
+  align-items: stretch !important;
+}
+.service-card{
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  background: #fff !important;
+  border-radius: 14px !important;
+  padding: 24px !important;
+}
+.service-card ul{
+  flex-grow: 1 !important;
+  list-style: none !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+.service-card ul li{
+  text-align: left !important;
+  display: flex !important;
+  gap: 8px !important;
+  margin-bottom: 8px !important;
+}
+.service-card .learn, .service-card a{
+  margin-top: auto !important;
+}
+
+/* Mobile ke liye - ye sabse important hai */
+@media screen and (max-width: 768px){
+  .services{
+    grid-template-columns: 1fr !important; /* Mobile pe 1 card per line */
+  }
+  .service-card{
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 440px){
+  .services{
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+}
+/* Button ko chota aur center karne ka final fix */
+.service-card {
+  text-align: center !important;
+}
+.service-card a,
+.service-card .learn,
+.service-card .btn {
+  display: inline-block !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  padding: 6px 18px !important;
+  font-size: 13px !important;
+  margin: 15px auto 0 auto !important;
+  align-self: center !important;
+}
+
+
+.product-img{
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 12px auto !important;
+  font-size: 28px !important;
+}
+.products{
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important;
+  gap: 20px !important;
+}
+@media(max-width:768px){
+  .products{
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media(max-width:440px){
+  .products{
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.testimonial-card{
+  background:#f8f9ff;
+  padding:22px;
+  border-radius:16px;
+  text-align:center;
+  height:100%;
+  min-height: 220px;
+}
+.testimonial-card img{
+  width:50px; height:50px; border-radius:50%; margin:15px auto 8px;
+  object-fit:cover; border:2px solid #ddd;
+}
+.testimonial-card h4{ margin:0; font-size:14px; }
+.testimonial-card span{ font-size:12px; color:#777; }
+.swiper{ padding-bottom: 40px !important; }
+.swiper-pagination-bullet-active{ background:#0d3b7a !important; }
+@media(max-width:768px){
+  .testimonial-card{ min-height: 180px; }
+}
