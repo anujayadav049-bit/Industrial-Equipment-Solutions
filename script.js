@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
   window.scrollTo(0, 0);
   setTimeout(() => {
     window.scrollTo(0, 0);
-    ScrollTrigger.refresh(); // ye line sabse important hai
+    ScrollTrigger.refresh(); // ye line  important hai
   }, 100);
 });
 
