@@ -216,8 +216,11 @@
 
     <!-- RIGHT - HEIGHT KAM -->
     <div style="flex:1; min-width:260px; padding:16px 18px;">
-      <form method="POST" action="contact_save.php" style="display:flex; flex-direction:column; gap:8px;">
-        
+      <form id="quoteForm" method="POST" action="contact_save.php" style="display:flex; flex-direction:column; gap:8px;">
+         <input type="hidden" name="source_page" value="printing_page">
+           <div id="formMsg" style="display:none; padding:12px; background:#d4edda; color:#155724; border-radius:8px; text-align:center; font-weight:bold; margin-bottom:15px;">
+    ✅ Submitted Successfully! Thank You.
+  </div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
           <input type="text" name="name" placeholder="Name *" required style="padding:8px 10px; border:1px solid #e8ecf5; border-radius:8px; font-size:11.5px; background:#f9fbff; outline:none; width:100%; box-sizing:border-box;">
           <input type="tel" name="phone" placeholder="Phone *" required style="padding:8px 10px; border:1px solid #e8ecf5; border-radius:8px; font-size:11.5px; background:#f9fbff; outline:none; width:100%; box-sizing:border-box;">
