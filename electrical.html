@@ -342,37 +342,6 @@
 <div id="wa-close-bottom" style="display:none; position:fixed; bottom:25px; right:25px; width:62px; height:62px; background:#25D366; border-radius:50%; align-items:center; justify-content:center; color:#fff; font-size:26px; z-index:9999; cursor:pointer;">
   <i class="fa-solid fa-xmark"></i>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="script.js"></script>
-
-<script>
-document.getElementById("quoteForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  var btn = this.querySelector('button[type="submit"]');
-  btn.innerText = "Sending...";
-  btn.disabled = true;
-  var formData = new FormData(this);
-  fetch("contact_save.php", { method: "POST", body: formData })
-  .then(res => res.text())
-  .then(data => {
-    console.log(data);
-    let msgBox = document.getElementById("formMsg");
-    msgBox.style.display = "block";
-    if(data.trim() == "success"){
-      msgBox.innerHTML = "✅ Submitted! We will call you in 10 mins.";
-      msgBox.style.background = "#d4edda"; msgBox.style.color = "#155724";
-      document.getElementById("quoteForm").reset();
-    } else {
-      msgBox.innerHTML = "❌ " + data;
-      msgBox.style.background = "#f8d7da"; msgBox.style.color = "#721c24";
-    }
-    btn.innerText = "Send Request"; btn.disabled = false;
-    setTimeout(()=>{ msgBox.style.display="none"; }, 5000);
-  });
-});
-</script>
 <script>
 document.getElementById('quoteForm').addEventListener('submit', function(e){
   e.preventDefault();
@@ -396,5 +365,10 @@ document.getElementById('quoteForm').addEventListener('submit', function(e){
   .finally(()=>{ btn.innerHTML = oldText; btn.disabled = false; });
 });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+
+
 </body>
 </html>
