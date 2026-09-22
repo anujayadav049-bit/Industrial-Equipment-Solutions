@@ -670,7 +670,7 @@ body:has(#mobileMenu.active) #bulk-offer-bar{ display:none !important; }
   color: #fff !important;
 }
 
-s@media (max-width: 768px){
+@media (max-width: 768px){
   #mobileMenu{
     background: #0e2f7a;
   }
@@ -961,7 +961,21 @@ s@media (max-width: 768px){
   .testimonial-card{ min-height: 180px; }
 }
 
+/* 9. H1, H2, P KO UPAR SE LAANA - jo tum puch rahi thi*/
+@keyframes uparAao {
+  from { transform: translateY(80px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-#submenu { display: none; }
-#submenu.show { display: block !important; }
-.has-sub i { transition: transform 0.3s ease; }
+/* SUBMENU FIX - Iske bina band nahi hoga */
+#submenu {
+  display: none !important;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#submenu.show {
+  display: block !important;
+  max-height: 500px; /* jitna bada submenu hai */
+}

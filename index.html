@@ -28,8 +28,9 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li class="has-sub">
-                   <a href="services.html" onclick="openSub(event)">Services
+                   <a href=""javascript:void(0)"" onclick="openSub(event)">Services
                      <i class="fa-solid fa-angle-down"></i></a>
+                    
                     <ul id="submenu">
                         <li><a href="electrical.html">Electrical</a></li>
                         <li><a href="stationery.html">Stationery</a></li>
@@ -648,100 +649,12 @@
             <div id="wa-close-bottom" style="display:none; position:fixed; bottom:25px; right:25px; width:62px; height:62px; background:#25D366; border-radius:50%; align-items:center; justify-content:center; color:#fff; font-size:26px; z-index:9999; cursor:pointer;">
             <i class="fa-solid fa-xmark"></i>
             </div>
-<script>
-        const waBtn = document.getElementById('wa-btn');
-        const waBox = document.getElementById('wa-box');
-        const waCloseTop = document.getElementById('wa-close-top');
-        const waCloseBottom = document.getElementById('wa-close-bottom');
 
-        function openWA(){ waBox.style.display='block'; waBtn.style.display='none'; waCloseBottom.style.display='flex'; }
-        function closeWA(){ waBox.style.display='none'; waBtn.style.display='flex'; waCloseBottom.style.display='none'; }
-
-        waBtn.onclick = openWA;
-        waCloseTop.onclick = closeWA;
-        waCloseBottom.onclick = closeWA;
-        
-        function openSub(e){
-          e.preventDefault();
-          e.stopPropagation();
-          const sub = document.getElementById('submenu');
-          const icon = e.currentTarget.querySelector('i');
-          sub.classList.toggle('show');
-          if(sub.classList.contains('show')){
-            icon.style.transform = 'rotate(180deg)';
-          } else {
-            icon.style.transform = 'rotate(0deg)';
-          }
-          return false;
-        }
-
-        function toggleMenu(){
-          const menu = document.getElementById('mobileMenu');
-          menu.classList.toggle('active');
-          if(!menu.classList.contains('active')){
-            const sub = document.getElementById('submenu');
-            sub.classList.remove('show');
-            const hasSubIcon = document.querySelector('.has-sub i');
-            if(hasSubIcon) hasSubIcon.style.transform = 'rotate(0deg)';
-          }
-        }
-
-        // Bahar click pe submenu band
-        document.addEventListener('click', function(e){
-          const sub = document.getElementById('submenu');
-          const hasSub = document.querySelector('.has-sub');
-          if(sub && hasSub && !hasSub.contains(e.target)){
-            sub.classList.remove('show');
-            const icon = hasSub.querySelector('i');
-            if(icon) icon.style.transform = 'rotate(0deg)';
-          }
-        });
-
-        document.getElementById("quoteForm").addEventListener("submit", function(e){
-        e.preventDefault();
-        var formData = new FormData(this);
-        fetch("contact_save.php", { method: "POST", body: formData })
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("formMsg").style.display = "block";
-            document.getElementById("quoteForm").reset();
-            setTimeout(()=>{ document.getElementById("formMsg").style.display="none"; }, 4000);
-        });
-        });
-</script>
-       
-<script>
-  // Sirf h1 aur p ko upar se layega
-  document.querySelectorAll("h1, h2, p, a, s").forEach((el, i) => {
-    el.style.animation = `uparAao 0.6s ease-out ${i * 0.02}s both`;
-  });
-</script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 20,
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    0: { slidesPerView: 1 },
-    640: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1024: { slidesPerView: 3 },
-  },
-});
-</script>
-
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
 <script src="animation.js"></script>
+
     </body>
 </html>
