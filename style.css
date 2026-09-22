@@ -931,14 +931,36 @@ body:has(#mobileMenu.active) #bulk-offer-bar{ display:none !important; }
 }
 
 /* SUBMENU FIX - Iske bina band nahi hoga */
+/* SUBMENU FIX - Laptop + Mobile dono ke liye */
+
+/* Laptop ke liye - Default */
 #submenu {
   display: none !important;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  z-index: 999;
 }
 
 #submenu.show {
   display: block !important;
-  max-height: 500px; /* jitna bada submenu hai */
+}
+
+/* Mobile ke liye - 768px se choti screen */
+@media (max-width: 768px) {
+  #submenu {
+    display: block !important; /* mobile pe display hamesha block rakho */
+    position: static; /* mobile pe absolute nahi chahiye */
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  #submenu.show {
+    max-height: 500px;
+  }
 }
