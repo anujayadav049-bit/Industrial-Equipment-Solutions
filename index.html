@@ -648,8 +648,7 @@
             <div id="wa-close-bottom" style="display:none; position:fixed; bottom:25px; right:25px; width:62px; height:62px; background:#25D366; border-radius:50%; align-items:center; justify-content:center; color:#fff; font-size:26px; z-index:9999; cursor:pointer;">
             <i class="fa-solid fa-xmark"></i>
             </div>
-
-        <script>
+<script>
         const waBtn = document.getElementById('wa-btn');
         const waBox = document.getElementById('wa-box');
         const waCloseTop = document.getElementById('wa-close-top');
@@ -663,16 +662,40 @@
         waCloseBottom.onclick = closeWA;
         
         function openSub(e){
-        e.preventDefault();
-        e.stopPropagation();
-        const sub = document.getElementById('submenu');
-        sub.classList.toggle('show');
-        return false;
+          e.preventDefault();
+          e.stopPropagation();
+          const sub = document.getElementById('submenu');
+          const icon = e.currentTarget.querySelector('i');
+          sub.classList.toggle('show');
+          if(sub.classList.contains('show')){
+            icon.style.transform = 'rotate(180deg)';
+          } else {
+            icon.style.transform = 'rotate(0deg)';
+          }
+          return false;
         }
 
         function toggleMenu(){
-        document.getElementById('mobileMenu').classList.toggle('active');
+          const menu = document.getElementById('mobileMenu');
+          menu.classList.toggle('active');
+          if(!menu.classList.contains('active')){
+            const sub = document.getElementById('submenu');
+            sub.classList.remove('show');
+            const hasSubIcon = document.querySelector('.has-sub i');
+            if(hasSubIcon) hasSubIcon.style.transform = 'rotate(0deg)';
+          }
         }
+
+        // Bahar click pe submenu band
+        document.addEventListener('click', function(e){
+          const sub = document.getElementById('submenu');
+          const hasSub = document.querySelector('.has-sub');
+          if(sub && hasSub && !hasSub.contains(e.target)){
+            sub.classList.remove('show');
+            const icon = hasSub.querySelector('i');
+            if(icon) icon.style.transform = 'rotate(0deg)';
+          }
+        });
 
         document.getElementById("quoteForm").addEventListener("submit", function(e){
         e.preventDefault();
@@ -685,10 +708,8 @@
             setTimeout(()=>{ document.getElementById("formMsg").style.display="none"; }, 4000);
         });
         });
-
-        
-        </script>
-
+</script>
+       
 <script>
   // Sirf h1 aur p ko upar se layega
   document.querySelectorAll("h1, h2, p, a, s").forEach((el, i) => {

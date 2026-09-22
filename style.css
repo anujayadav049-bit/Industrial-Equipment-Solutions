@@ -960,3 +960,8 @@ s@media (max-width: 768px){
 @media(max-width:768px){
   .testimonial-card{ min-height: 180px; }
 }
+
+
+#submenu { display: none; }
+#submenu.show { display: block !important; }
+.has-sub i { transition: transform 0.3s ease; }
