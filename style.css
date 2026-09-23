@@ -1067,4 +1067,11 @@ body:has(#mobileMenu.active) #bulk-offer-bar{ display:none !important; }
   }
 }
 
+/*product page design*/
+
+
+/*office stationry*/
+#ies-stationery h1{color:#ffffff !important; -webkit-text-fill-color:#ffffff !important; margin:0;}
+#ies-stationery h1 span{color:#ffcc00 !important; -webkit-text-fill-color:#ffcc00 !important;}
+#ies-stationery .hero-desc{color:rgba(255,255,255,0.85) !important; -webkit-text-fill-color:rgba(255,255,255,0.85) !important;}
 
