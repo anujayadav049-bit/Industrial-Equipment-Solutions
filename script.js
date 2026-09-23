@@ -132,3 +132,4 @@ document.addEventListener('DOMContentLoaded', () => {
     el.style.animation = `uparAao 0.6s ease-out ${i * 0.02}s both`;
   });
 });
+
